@@ -230,6 +230,7 @@ h2 span {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  align-items: center;
 }
 
 .profil .profil-row .profil-gembala .profil-sosmed a {
@@ -358,14 +359,16 @@ h2 span {
 
   .profil .profil-row .profil-gembala .profil-sosmed a {
     font-size: 0.6rem;
-    padding: 0.1rem 1rem;
+    padding: 0 0.5rem;
+    gap: 0.3rem;
+    border-radius: 10px;
     border: 1px solid var(--dark);
   }
 
   .profil .profil-row .profil-gembala .profil-sosmed a .sosmed-ig,
   .profil .profil-row .profil-gembala .profil-sosmed a .sosmed-fb,
   .profil .profil-row .profil-gembala .profil-sosmed a .sosmed-yt {
-    width: 1.5rem;
+    width: 1.2rem;
   }
 }
 
