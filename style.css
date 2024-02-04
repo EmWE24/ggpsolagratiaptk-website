@@ -229,7 +229,7 @@ h2 span {
   flex: 1;
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -268,7 +268,7 @@ h2 span {
 
   /* Hero query */
   .hero .content h1 {
-    font-size: 8rem;
+    font-size: 6rem;
   }
 }
 
