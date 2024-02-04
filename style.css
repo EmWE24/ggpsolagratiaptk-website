@@ -22,6 +22,22 @@ body {
   background-color: var(--bg);
 }
 
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h2 span {
+  color: var(--primary);
+}
+
+.about,
+.profil {
+  height: 100vh;
+  padding: 8rem 7% 1rem;
+}
+
 /* Navbar start */
 .navbar {
   border-bottom: 1px solid var(--primary);
@@ -147,111 +163,96 @@ body {
 /* Hero end */
 
 /* About start */
-.about {
-  height: 100vh;
-  padding: 8rem 7% 1rem;
-}
-
-.about h2 span {
-  color: var(--primary);
-}
-
-.about .row {
+.about .about-row {
   display: flex;
+  width: 100%;
 }
 
-.about .row .about-img {
-  flex: 2 1 60rem;
+.about .about-row .about-img {
+  min-width: 55%;
 }
 
-.about .row .about-img img {
+.about .about-row .about-img img {
   width: 100%;
   border-radius: 20px 0px 0px 20px;
 }
 
-.about .row .column {
-  flex: 1 1 40rem;
+.about .about-row .about-text {
+  min-width: 45%;
+  padding-left: 1rem;
 }
 
-.about .row .column .about-text {
-  width: 100%;
-  height: 80%;
-  padding: 0 0 0 1rem;
-}
-
-.about .row .column .about-text span {
+.about .about-row .about-text span {
   font-size: 1.3rem;
   font-weight: 600;
 }
 
-.about .row .column .about-text p {
+.about .about-row .about-text p {
   font-size: 1.3rem;
   font-weight: 300;
   padding-bottom: 1rem;
 }
+/* About end */
 
-.about h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 2rem;
+/* Profil start */
+.profil .profil-row {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.about .row .column .about-sosmed {
-  width: 100%;
-  height: 20%;
+.profil .profil-row .profil-gembala {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  height: 35rem;
+  border-radius: 20px;
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--light);
+}
+
+.profil .profil-row .profil-gembala .profil-foto {
+  height: 30%;
+}
+
+.profil .profil-row .profil-gembala .profil-foto img {
+  height: 100%;
+}
+
+.profil .profil-row .profil-gembala .profil-text {
+  flex: 5;
+  padding: 1rem 0;
+}
+
+.profil .profil-row .profil-gembala .profil-sosmed {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.profil .profil-row .profil-gembala .profil-sosmed a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.2rem 1.2rem 0 1.2rem;
-}
-
-.about .row .column .about-sosmed a {
-  color: var(--light);
-  font-size: 1rem;
-  background-color: var(--dark2);
-  margin: 0 0.5rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border: 2px solid var(--light);
+  font-size: 0.8rem;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid var(--dark2);
+  color: var(--dark2);
   transition: 0.1s linear;
 }
 
-.about .row .column .about-sosmed a:hover {
+.profil .profil-row .profil-gembala .profil-sosmed a:hover {
+  color: var(--light);
   background-color: var(--primary);
   transition: 0.1s linear;
 }
-/* About end */
+/* Profil end */
 
 /* Media Query */
-@media (max-width: 1200px) {
-  /* About query */
-  .about .row {
-    flex-wrap: wrap;
-  }
-
-  .about .row .about-img img {
-    border-radius: 20px 20px 0px 0px;
-  }
-
-  .about .row .column .about-text {
-    padding: 0;
-    margin-top: 1rem;
-  }
-
-  .about .row .column .about-sosmed {
-    padding: 0;
-    flex-wrap: wrap;
-  }
-
-  .about .row .column .about-sosmed a {
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-}
-
 /* Laptop */
 @media (max-width: 1440px) {
   html {
@@ -334,6 +335,38 @@ body {
     display: inline-block;
     width: 80%;
   }
+
+  /* About query */
+  .about .about-row {
+    flex-wrap: wrap;
+  }
+
+  .about .about-row .about-img img {
+    border-radius: 20px 20px 0px 0px;
+  }
+
+  .about .about-row .about-text {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  /* Profil query */
+  .profil .profil-row .profil-gembala {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .profil .profil-row .profil-gembala .profil-sosmed a {
+    font-size: 0.6rem;
+    padding: 0.2rem 1rem;
+    border: 1px solid var(--dark);
+  }
+
+  .profil .profil-row .profil-gembala .profil-sosmed a .sosmed-ig,
+  .profil .profil-row .profil-gembala .profil-sosmed a .sosmed-fb,
+  .profil .profil-row .profil-gembala .profil-sosmed a .sosmed-yt {
+    width: 1.5rem;
+  }
 }
 
 /* Mobile */
@@ -342,11 +375,7 @@ body {
     font-size: 50%;
   }
 
-  .hero .content h1 {
-    font-size: 6rem;
-    line-height: 6rem;
-  }
-
+  /* Navbar query */
   .navbar .logo img {
     width: 30px;
     height: 30px;
@@ -355,5 +384,30 @@ body {
   #Menu {
     display: inline-block;
     width: 60%;
+  }
+
+  /* Hero query */
+  .hero .content h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  /* About query */
+  .about .about-row .column .about-text {
+    padding: 0;
+    margin-top: 1rem;
+    height: 65%;
+  }
+
+  .about .about-row .column .about-sosmed {
+    padding: 0;
+    flex-wrap: wrap;
+    height: 35%;
+  }
+
+  /* Profil query */
+  .profil .profil-row {
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 }
