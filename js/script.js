@@ -1,3 +1,20 @@
+let headerImage = document.querySelectorAll(".background");
+let imageIndex = 0;
+
+function changeBackground() {
+  headerImage[imageIndex].classList.remove("showing");
+
+  imageIndex++;
+
+  if (imageIndex >= headerImage.length) {
+    imageIndex = 0;
+  }
+
+  headerImage[imageIndex].classList.add("showing");
+}
+
+setInterval(changeBackground, 5000);
+
 const Navbar = document.querySelector(".nav-navbar");
 document.querySelector("#Menu").onclick = () => {
   Navbar.classList.toggle("active");

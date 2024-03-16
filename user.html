@@ -31,7 +31,7 @@
         <ul>
           <li><a href="#home">Utama</a></li>
           <li><a href="#about">Tentang</a></li>
-          <li><a href="#profil">Profil</a></li>
+          <li><a href="#profile">Profil</a></li>
           <li><a href="#">Galeri</a></li>
           <li><a href="#">Jadwal</a></li>
         </ul>
@@ -42,91 +42,170 @@
     </div>
     <!-- Navbar end -->
 
-    <!-- Hero start -->
+    <!-- Home start -->
     <section class="hero" id="home">
-      <div class="mask-container">
-        <main class="content">
-          <h1>Selamat Datang !</h1>
-        </main>
-      </div>
+      <div class="linear"></div>
+      <main class="content">
+        <video
+          id="vidText"
+          src="vid/SelamatDatang.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <video
+          id="vidBackground"
+          src="vid/starBackground.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div class="background-container">
+          <img class="showing background" src="img/hero1.jpg" />
+          <img class="background" src="img/hero2.jpg" />
+          <img class="background" src="img/hero3.jpg" />
+        </div>
+      </main>
     </section>
-    <!-- Hero end -->
+    <!-- Home end -->
 
     <!-- About start -->
     <section class="about" id="about">
-      <h2><span>Tentang</span> Kami</h2>
-      <div class="about-row">
-        <div class="about-img"><img src="img/foto2.jpg" /></div>
-        <div class="about-text">
-          <p>
-            <span>GGP SOLA GRATIA PONTIANAK adalah</span> Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Ducimus, sed iusto! Facre nisi
-            molestiae amet dolorum ullam dolor incidunt sequi eligendi au
-            blanditiis ad, deserunt distinctio reiciendis tenetur optio vel?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio
-            maxime nulla, cupiditate aliquam quibusdam beatae corporis
-            voluptatum deleniti ut.
-          </p>
-        </div>
+      <h1>Tentang <span>Kami</span></h1>
+      <p>
+        <span>Lorem ipsum</span> dolor sit amet consectetur, adipisicing elit.
+        Quibusdam, est architecto. Sapiente omnis rerum odio officia laborum
+        unde eum harum laboriosam voluptatibus praesentium culpa quidem,
+        mollitia aut. Perspiciatis, adipisci tenetur, nesciunt eligendi
+        laboriosam vero suscipit dolore rem cumque repudiandae obcaecati ducimus
+        ab corrupti qui rerum fuga fugit voluptas assumenda. Quam odit ut
+        corporis vero ipsum iste dolor nulla reprehenderit. Temporibus velit
+        esse ducimus sequi deleniti asperiores reiciendis veniam repellendus
+        exercitationem voluptatibus, commodi fugiat iure incidunt ex voluptates
+        dolore, maiores amet natus nemo quam necessitatibus ut. Tempora magni
+        praesentium sit veritatis. Quo recusandae voluptatibus esse illum sit.
+        Reprehenderit sint tenetur necessitatibus?
+      </p>
+      <div class="sosmed">
+        <li>
+          <a href="www.youtube.com"
+            ><i data-feather="youtube" id="youtube-about"></i
+          ></a>
+        </li>
+        <li>
+          <a href="www.instagram.com"
+            ><i data-feather="instagram" id="instagram-about"></i
+          ></a>
+        </li>
+        <li>
+          <a href="www.tiktok.com"
+            ><i data-feather="music" id="music-about"></i
+          ></a>
+        </li>
       </div>
     </section>
     <!-- About end -->
 
-    <!-- Profil start -->
-    <section class="profil" id="profil">
-      <h2><span>Profil</span> Gembala</h2>
-      <div class="profil-row">
-        <div class="profil-gembala">
-          <div class="profil-foto"><img src="img/logo.png" /></div>
-          <div class="profil-text">
-            <h3>Nama1</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              dicta vel assumenda ducimus, nostrum possimus voluptate fuga
-              tenetur fugiat sed dignissimos doloribus dolorem repellat magnam
-              officiis libero modi deleniti vitae.
-            </p>
+    <!-- Profile start -->
+    <section class="profile" id="profile">
+      <div class="profile-container">
+        <h1>Profil <span>Gembala</span></h1>
+        <div class="profileBoxGembala-container">
+          <div class="profileBoxGembala">
+            <div class="photoProfileGembala">
+              <img src="img/profil.jpg" alt="Profile" />
+            </div>
+            <div class="contentProfileGembala">
+              <h2>Gembala 1</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                architecto velit id enim perspiciatis voluptas nemo explicabo
+                omnis a. Alias fuga odit at suscipit dolor! Necessitatibus eos
+                laudantium veritatis blanditiis! Rem tenetur possimus
+                accusantium cum quia, accusamus error esse maiores commodi
+                tempore libero eos enim quas sit totam sint doloribus!
+              </p>
+              <div class="sosmed">
+                <p>Social media :</p>
+                <li>
+                  <a href="www.youtube.com"
+                    ><i data-feather="youtube" id="youtube-profile"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="www.instagram.com"
+                    ><i data-feather="instagram" id="instagram-profile"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="www.tiktok.com"
+                    ><i data-feather="music" id="music-profile"></i
+                  ></a>
+                </li>
+              </div>
+            </div>
           </div>
-          <div class="profil-sosmed">
-            <a href="#"
-              ><i data-feather="instagram" class="sosmed-ig"></i>gembala1</a
-            >
-            <a href="#"
-              ><i data-feather="facebook" class="sosmed-fb"></i>gembala1</a
-            >
-            <a href="#"
-              ><i data-feather="youtube" class="sosmed-yt"></i>gembala1</a
-            >
+          <div class="profileBoxGembala">
+            <div class="photoProfileGembala">
+              <img src="img/profil.jpg" alt="Profile" />
+            </div>
+            <div class="contentProfileGembala">
+              <h2>Gembala 2</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                architecto velit id enim perspiciatis voluptas nemo explicabo
+                omnis a. Alias fuga odit at suscipit dolor! Necessitatibus eos
+                laudantium veritatis blanditiis! Rem tenetur possimus
+                accusantium cum quia, accusamus error esse maiores commodi
+                tempore libero eos enim quas sit totam sint doloribus!
+              </p>
+              <div class="sosmed">
+                <p>Social media :</p>
+                <li>
+                  <a href="www.youtube.com"
+                    ><i data-feather="youtube" id="youtube-profile"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="www.instagram.com"
+                    ><i data-feather="instagram" id="instagram-profile"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="www.tiktok.com"
+                    ><i data-feather="music" id="music-profile"></i
+                  ></a>
+                </li>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="profil-gembala">
-          <div class="profil-foto"><img src="img/logo.png" /></div>
-          <div class="profil-text">
-            <h3>Nama2</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-              dicta vel assumenda ducimus, nostrum possimus voluptate fuga
-              tenetur fugiat sed dignissimos doloribus dolorem repellat magnam
-              officiis libero modi deleniti vitae.
-            </p>
+        <div class="profileBoxPengurus-container">
+          <div class="profileBoxPengurus">
+            <p>1</p>
           </div>
-          <div class="profil-sosmed">
-            <a href="#"
-              ><i data-feather="instagram" class="sosmed-ig"></i>gembala2</a
-            >
-            <a href="#"
-              ><i data-feather="facebook" class="sosmed-fb"></i>gembala2</a
-            >
-            <a href="#"
-              ><i data-feather="youtube" class="sosmed-yt"></i>gembala2</a
-            >
+          <div class="profileBoxPengurus">
+            <p>2</p>
+          </div>
+          <div class="profileBoxPengurus">
+            <p>3</p>
+          </div>
+          <div class="profileBoxPengurus">
+            <p>4</p>
+          </div>
+          <div class="profileBoxPengurus">
+            <p>5</p>
+          </div>
+          <div class="profileBoxPengurus">
+            <p>6</p>
+          </div>
+          <div class="profileBoxPengurus">
+            <p>7</p>
           </div>
         </div>
       </div>
     </section>
-    <!-- Profil end -->
+    <!-- Profile end -->
 
     <!-- Icons JS -->
     <script>
