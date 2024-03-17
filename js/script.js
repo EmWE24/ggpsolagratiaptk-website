@@ -1,3 +1,14 @@
+document.addEventListener("scroll", () => {
+  const navBar = document.querySelector(".navbar");
+
+  if (window.scrollY > 500) {
+    navBar.classList.remove("transparent");
+  } else {
+    navBar.classList.add("transparent");
+    NavbarNav.classList.remove("active");
+  }
+});
+
 let headerImage = document.querySelectorAll(".background");
 let imageIndex = 0;
 
@@ -28,16 +39,3 @@ document.addEventListener(
     }
   })
 );
-
-const NavBar = document.querySelector(".navbar");
-window.onscroll = function () {
-  scrollFunction();
-};
-
-function scrollFunction() {
-  if (window.scrollY > 20) {
-    NavBar.classList.remove("transparent");
-  } else {
-    NavBar.classList.add("transparent");
-  }
-}

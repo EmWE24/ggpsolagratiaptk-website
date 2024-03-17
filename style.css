@@ -33,6 +33,7 @@ body {
   left: 0;
   right: 0;
   background-color: var(--light);
+  transition: linear 0.3s;
   z-index: 9999;
 }
 
@@ -48,10 +49,12 @@ body {
   overflow-wrap: break-word;
   line-height: 1rem;
   color: var(--dark);
+  transition: 0.3s linear;
 }
 
 .navbar .logo span {
   color: var(--primary);
+  transition: 0.3s linear;
 }
 
 .navbar .logo img {
@@ -103,27 +106,45 @@ body {
   transition: 0.1s linear;
 }
 
-.transparent {
+.navbar.transparent {
   border-bottom: 0px;
   background-color: transparent;
+  transition: 0.3s linear;
 }
 
-.transparent .logo span {
+.navbar.transparent .logo span {
   color: var(--secondary);
+  transition: 0.3s linear;
 }
 
-.transparent .logo p {
+.navbar.transparent .logo p {
   color: var(--light);
+  transition: 0.3s linear;
 }
 
-.transparent .nav-navbar li a {
+.navbar.transparent .nav-navbar li a {
   color: var(--light);
+  transition: 0.3s linear;
 }
 
-.transparent #Menu {
+.navbar.transparent .nav-navbar li a:hover {
+  color: var(--secondary);
+  transition: 0.1s linear;
+}
+
+.navbar.transparent .nav-navbar li a::after {
+  border-bottom: 1.5px solid var(--secondary);
+}
+
+.navbar.transparent #Menu {
   color: var(--light);
+  transition: 0.3s linear;
 }
 
+.navbar.transparent #Menu:hover {
+  color: var(--secondary);
+  transition: 0.3s linear;
+}
 /* Navbar end */
 
 /* Home start */
@@ -484,6 +505,20 @@ body {
     height: 40px;
   }
 
+  .navbar .nav-navbar {
+    position: absolute;
+    background-color: var(--dark2);
+    height: 100vh;
+    width: 200px;
+    right: -100%;
+    top: 101%;
+  }
+
+  .navbar .nav-navbar.active {
+    right: 0%;
+    transition: 0.3s linear;
+  }
+
   .navbar .nav-navbar li {
     display: block;
     padding: 0;
@@ -511,24 +546,51 @@ body {
     transform: scaleX(0.2);
   }
 
-  .navbar .nav-navbar {
-    position: absolute;
-    background-color: var(--dark2);
-    height: 100vh;
-    width: 200px;
-    right: -100%;
-    top: 101%;
-    transition: 0.3s linear;
-  }
-
-  .navbar .nav-navbar.active {
-    right: 0%;
-    transition: 0.3s linear;
-  }
-
   #Menu {
     display: inline-block;
     width: 80%;
+  }
+
+  .navbar.transparent .nav-navbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 100%;
+    width: auto;
+    right: 7%;
+    top: 0;
+    transition: none;
+  }
+
+  .navbar.transparent .nav-navbar li {
+    display: inline-block;
+    border-bottom: 0px;
+  }
+
+  .navbar.transparent .nav-navbar li a {
+    display: block;
+    padding: 0;
+    margin: 0.5rem;
+    color: var(--light);
+    transition: 0.1s linear;
+  }
+
+  .navbar.transparent .nav-navbar li a:hover {
+    background-color: transparent;
+    transition: 0.1s linear;
+  }
+
+  .navbar.transparent .nav-navbar li a::after {
+    transform-origin: center;
+  }
+
+  .navbar.transparent .nav-navbar li a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .navbar.transparent #Menu {
+    display: none;
   }
 
   /* About query */
