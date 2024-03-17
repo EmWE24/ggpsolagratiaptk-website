@@ -227,7 +227,7 @@ body {
   padding: 0 7%;
   width: 100%;
   height: 100%;
-  background-color: var(--secondary);
+  background-color: var(--dark);
 }
 
 .about h1,
@@ -248,14 +248,12 @@ body {
 .about p {
   text-align: center;
   color: var(--light);
-  margin-top: 2rem;
 }
 
 .about .sosmed {
   display: flex;
   height: 4rem;
   width: 16rem;
-  margin-top: 2rem;
   gap: 2rem;
 }
 
