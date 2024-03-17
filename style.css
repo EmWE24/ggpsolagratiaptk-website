@@ -127,6 +127,11 @@ body {
 /* Navbar end */
 
 /* Home start */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero {
   width: 100%;
   height: 100vh;
@@ -227,7 +232,7 @@ body {
   padding: 0 7%;
   width: 100%;
   height: 100%;
-  background-color: var(--primary);
+  background-color: var(--dark);
 }
 
 .about h1,
