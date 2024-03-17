@@ -140,14 +140,14 @@ body {
 }
 
 #vidText {
-  height: 120%;
+  height: 100%;
   position: fixed;
   mix-blend-mode: lighten;
   z-index: 3;
 }
 
 #vidBackground {
-  height: 120%;
+  height: 100%;
   mix-blend-mode: lighten;
   opacity: 0.5;
   animation: fadeIn 5s;
