@@ -519,6 +519,11 @@ body {
     width: 80%;
   }
 
+  /* About query */
+  .about {
+    height: 40vh;
+  }
+
   /* Profile query */
   .profile {
     height: 200vh;
