@@ -183,6 +183,7 @@ body {
   height: 100%;
   overflow: hidden;
   z-index: 0;
+  background-color: #ffe867;
 }
 
 .linear {
