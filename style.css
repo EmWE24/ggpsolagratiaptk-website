@@ -151,7 +151,7 @@ body {
 }
 
 #vidBackground {
-  height: 120%;
+  height: 100%;
   mix-blend-mode: lighten;
   opacity: 0.5;
   animation: fadeIn 5s;
