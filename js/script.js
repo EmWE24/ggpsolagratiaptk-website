@@ -1,11 +1,13 @@
 document.addEventListener("scroll", () => {
   const navBar = document.querySelector(".navbar");
+  const NavbarNav = document.querySelector(".nav-navbar");
 
   if (window.scrollY > 500) {
     navBar.classList.remove("transparent");
   } else {
-    navBar.classList.add("transparent");
-    NavbarNav.classList.remove("active");
+    if (!NavbarNav.classList.contains("active")) {
+      navBar.classList.add("transparent");
+    }
   }
 });
 
@@ -26,9 +28,13 @@ function changeBackground() {
 
 setInterval(changeBackground, 5000);
 
+const navBar = document.querySelector(".navbar");
 const NavbarNav = document.querySelector(".nav-navbar");
 document.querySelector("#Menu").onclick = () => {
   NavbarNav.classList.toggle("active");
+  if (window.scrollY < 500) {
+    navBar.classList.toggle("transparent");
+  }
 };
 
 const Menu = document.querySelector("#Menu");
@@ -36,6 +42,9 @@ document.addEventListener(
   (onclick = function (e) {
     if (!Menu.contains(e.target) && !NavbarNav.contains(e.target)) {
       NavbarNav.classList.remove("active");
+      if (window.scrollY < 500) {
+        navBar.classList.add("transparent");
+      }
     }
   })
 );
