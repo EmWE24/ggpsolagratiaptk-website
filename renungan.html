@@ -32,18 +32,26 @@
       </div>
       <div class="nav-navbar">
         <ul>
-          <li><a href="home.php #home" class="nav home">Utama</a></li>
-          <li><a href="home.php #about" class="nav about">Tentang</a></li>
-          <li><a href="home.php #profile" class="nav profile">Profil</a></li>
-          <li><a href="home.php #renungan" class="nav renungan select">Renungan</a></li>
-          <li><a href="home.php #jadwal" class="nav jadwal">Jadwal</a></li>
+          <li><a href="home.html#home" class="nav home">Utama</a></li>
+          <li><a href="home.html#about" class="nav about">Tentang</a></li>
+          <li><a href="home.html#profile" class="nav profile">Profil</a></li>
+          <li>
+            <a href="home.html#renungan" class="nav renungan select"
+              >Renungan</a
+            >
+          </li>
+          <li><a href="home.html#jadwal" class="nav jadwal">Jadwal</a></li>
           <li class="cbo">
             <a href="#daftar" class="nav daftar"
               >Daftar<i width="1.3rem" data-feather="chevron-down"></i
             ></a>
             <ul class="value">
-              <li><a href="daftarJemaat.php" class="sub-nav">Jemaat</a></li>
-              <li><a href="daftarBaptis.php" class="sub-nav">Baptis</a></li>
+              <li>
+                <a href="daftarJemaat.html" class="sub-nav">Jemaat</a>
+              </li>
+              <li>
+                <a href="daftarBaptis.html" class="sub-nav">Baptis</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -104,7 +112,10 @@
               <?= date_format($tgl1, 'd-m-Y') ?>
             </i>
           </p>
-          <p>" <?= $baris1['ayat'] ?> "
+          <p>
+            "
+            <?= $baris1['ayat'] ?>
+            "
           </p>
           <p>
             <b><?= $baris1['injil'] ?></b>

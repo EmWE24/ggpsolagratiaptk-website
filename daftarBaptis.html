@@ -1,38 +1,29 @@
-<?php
+<!-- <?php
   include 'koneksi.php';
-
+  
   if (isset($_POST['daftar'])){
-    $queryKode = mysqli_query($conn, 'SELECT right(max(kd_jemaat),3) as kode FROM tbl_jemaat');
-    $hasil = mysqli_fetch_array($queryKode);
-    $kd_jemaat = "JMT".substr("000", strlen((int)$hasil['kode'] + 1)).(int)$hasil['kode'] + 1;
-
     $nama = $_POST['nama'];
     $tempat_lahir = $_POST['tempatL'];
     $tanggal_lahir = $_POST['tanggalL'];
-    $jenis_kelamin = $_POST['jk'];
+    $no_WA = $_POST['noWA'];
+    $alamat = $_POST['alamat'];
     $nama_ayah = $_POST['namaAyah'];
     $nama_ibu = $_POST['namaIbu'];
-    $alamat = $_POST['alamat'];
-    $no_WA = $_POST['noWA'];
-    $batis = $_POST['baptis'];
+    $asal_gereja = $_POST['gereja'];
+    $izin = $_POST['izin'];
 
-    $queryTambah = mysqli_query($conn, "INSERT INTO tbl_jemaat VALUES ('$kd_jemaat','$nama','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$nama_ayah','$nama_ibu','$alamat','$no_WA','$batis')");
+    $queryTambah = mysqli_query($conn, "INSERT INTO tbl_daftarbaptis(nama,tempat_lahir,tanggal_lahir,no_wa,alamat,nama_ayah,nama_ibu,asal_gereja,diizinkan) VALUES ('$nama','$tempat_lahir','$tanggal_lahir','$no_WA','$alamat','$nama_ayah','$nama_ibu','$asal_gereja','$izin')");
     
-    if (mysqli_affected_rows($conn) > 0) {
-      echo "
-            <script>
-              alert('data berhasil ditambahkan!');
-            </script>
-        ";
-    } else {
-      echo "
-            <script>
-                alert('data gagal ditambahkan!');
-            </script>
-        ";
-    }
-  }
-?>
+    if (mysqli_affected_rows($conn) >
+0) { echo "
+<script>
+  alert("data berhasil ditambahkan!");
+</script>
+"; } else { echo "
+<script>
+  alert("data gagal ditambahkan!");
+</script>
+"; } } ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,20 +56,24 @@
       </div>
       <div class="nav-navbar">
         <ul>
-          <li><a href="home.php #home" class="nav home">Utama</a></li>
-          <li><a href="home.php #about" class="nav about">Tentang</a></li>
-          <li><a href="home.php #profile" class="nav profile">Profil</a></li>
-          <li><a href="home.php #renungan" class="nav renungan">Renungan</a></li>
-          <li><a href="home.php #jadwal" class="nav jadwal">Jadwal</a></li>
+          <li><a href="home.html#home" class="nav home">Utama</a></li>
+          <li><a href="home.html#about" class="nav about">Tentang</a></li>
+          <li><a href="home.html#profile" class="nav profile">Profil</a></li>
+          <li>
+            <a href="home.html#renungan" class="nav renungan">Renungan</a>
+          </li>
+          <li><a href="home.html#jadwal" class="nav jadwal">Jadwal</a></li>
           <li class="cbo">
             <a href="#daftar" class="nav daftar select"
               >Daftar<i width="1.3rem" data-feather="chevron-down"></i
             ></a>
             <ul class="value">
               <li>
-                <a href="daftarJemaat.php" class="sub-nav select">Jemaat</a>
+                <a href="daftarJemaat.html" class="sub-nav">Jemaat</a>
               </li>
-              <li><a href="daftarBaptis.php" class="sub-nav">Baptis</a></li>
+              <li>
+                <a href="daftarBaptis.html" class="sub-nav select">Baptis</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -92,7 +87,7 @@
     <!-- Header start -->
     <div class="header">
       <div class="content">
-        <p>Daftar Menjadi Jemaat</p>
+        <p>Daftar untuk diBaptis</p>
       </div>
     </div>
     <!-- Header end -->
@@ -107,7 +102,12 @@
               <p>Nama</p>
               <span>Wajib diisi</span>
             </div>
-            <input type="text" name="nama" placeholder="Masukkan nama" required />
+            <input
+              type="text"
+              name="nama"
+              placeholder="Masukkan nama"
+              required
+            />
           </div>
           <div class="two-column">
             <div class="textBox">
@@ -115,7 +115,12 @@
                 <p>Tempat Lahir</p>
                 <span>Wajib diisi</span>
               </div>
-              <input type="text" name="tempatL" placeholder="Masukkan tempat lahir" required />
+              <input
+                type="text"
+                name="tempatL"
+                placeholder="Masukkan tempat lahir"
+                required
+              />
             </div>
             <div class="textBox">
               <div class="details">
@@ -125,68 +130,49 @@
               <input
                 type="date"
                 name="tanggalL"
-                id="tanggalL"
                 placeholder="Masukkan tanggal lahir"
                 required
               />
             </div>
           </div>
-          <div class="textBox">
-            <div class="details">
-              <p>Nama Ayah</p>
-              <span>Wajib diisi</span>
-            </div>
-            <input type="text" name="namaAyah" placeholder="Masukkan nama ayah" required />
-          </div>
-          <div class="textBox">
-            <div class="details">
-              <p>nama ibu</p>
-              <span>Wajib diisi</span>
-            </div>
-            <input type="text" name="namaIbu" placeholder="Masukkan nama ibu" required />
-          </div>
           <div class="two-column">
-            <div class="rdbBox">
+            <div class="textBox">
               <div class="details">
-                <p>Jenis Kelamin</p>
+                <p>Nomor Whatsapp</p>
                 <span>Wajib diisi</span>
               </div>
-              <div class="rdb-container">
-                <div class="rdb">
-                  <input
-                    type="radio"
-                    name="jk"
-                    id="laki-laki"
-                    value="Laki-Laki"
-                    required="required"
-                  />
-                  <label for="laki-laki">Laki-Laki</label>
-                </div>
-                <div class="rdb">
-                  <input
-                    type="radio"
-                    name="jk"
-                    id="perempuan"
-                    value="Perempuan"
-                    required="required"
-                  />
-                  <label for="perempuan">Perempuan</label>
-                </div>
-              </div>
+              <input
+                type="text"
+                name="noWA"
+                placeholder="Masukkan nomor whatsapp aktif"
+                required
+              />
             </div>
             <div class="rdbBox">
               <div class="details">
-                <p>Telah diBaptis</p>
+                <p>Gereja</p>
                 <span>Wajib diisi</span>
               </div>
               <div class="rdb-container">
                 <div class="rdb">
-                  <input type="radio" name="baptis" id="sudah" value="Sudah" required="required"/>
-                  <label for="sudah">Sudah</label>
+                  <input
+                    type="radio"
+                    name="gereja"
+                    id="solaGratia"
+                    value="Sola Gratia"
+                    required="required"
+                  />
+                  <label for="solaGratia">Sola Gratia</label>
                 </div>
                 <div class="rdb">
-                  <input type="radio" name="baptis" id="belum" value="Belum" required="required"/>
-                  <label for="belum">Belum</label>
+                  <input
+                    type="radio"
+                    name="gereja"
+                    id="luarSolaGratia"
+                    value="Luar Sola Gratia"
+                    required="required"
+                  />
+                  <label for="luarSolaGratia">Luar Sola Gratia</label>
                 </div>
               </div>
             </div>
@@ -205,15 +191,48 @@
           </div>
           <div class="textBox">
             <div class="details">
-              <p>Nomor Whatsapp</p>
+              <p>Nama Ayah</p>
               <span>Wajib diisi</span>
             </div>
             <input
               type="text"
-              name="noWA"
-              placeholder="Masukkan nomor whatsapp aktif"
+              name="namaAyah"
+              placeholder="Masukkan nama ayah"
               required
             />
+          </div>
+          <div class="textBox">
+            <div class="details">
+              <p>nama ibu</p>
+              <span>Wajib diisi</span>
+            </div>
+            <input
+              type="text"
+              name="namaIbu"
+              placeholder="Masukkan nama ibu"
+              required
+            />
+          </div>
+          <div class="rdbBox">
+            <div class="detailsIzin">
+              <p>Telah diIzinkan Orang Tua</p>
+              <span
+                >Sebelum melanjutkan proses pendaftaran, mohon konfirmasikan
+                apakah Anda telah mendapatkan izin dari orang tua atau wali yang
+                bertanggung jawab.</span
+              >
+            </div>
+            <div class="rdb-container">
+              <div class="rdb">
+                <input
+                  type="radio"
+                  name="izin"
+                  value="true"
+                  required="required"
+                />
+                <label for="izin">diIzinkan</label>
+              </div>
+            </div>
           </div>
         </div>
         <div class="button-container">
